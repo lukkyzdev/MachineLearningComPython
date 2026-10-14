@@ -1,74 +1,45 @@
-# ATIVIDADE PRÁTICA - Machine Learning Com Python <img align="center" alt="Fontes-Python" height="35" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"> 
+# <img align="center" alt="Python" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"> Machine Learning | Classificação Multiclasse com TensorFlow
+
+Um projeto de **Machine Learning** focado na construção, treino e avaliação de uma Rede Neural Artificial (RNA) em Python. 
+
+O sistema processa o clássico conjunto de dados *Iris*, aprendendo padrões morfológicos (medidas de sépalas e pétalas) para classificar de forma autónoma as diferentes espécies de flores.
+
+## 🎯 Objetivo do Projeto
+O objetivo deste projeto foi aplicar na prática os fundamentos de **Análise de Dados** e **Inteligência Artificial**, estruturando o ciclo de vida completo de um modelo preditivo:
+- Pré-processamento e normalização de dados brutos.
+- Divisão estratégica de conjuntos de treino e teste (*Train/Test Split*).
+- Arquitetura, compilação e treino de uma rede neural profunda.
+- Avaliação de acurácia e geração de inferências (previsões probabilísticas).
+
+## 💻 Tecnologias e Ferramentas Aplicadas
+- **Python:** Linguagem base utilizada no ambiente de desenvolvimento.
+- **TensorFlow / Keras:** Construção da arquitetura da rede neural, definição do otimizador (`adam`) e função de perda (`sparse_categorical_crossentropy`).
+- **Scikit-Learn:** Importação do dataset original, divisão dos dados para treino/teste e normalização das escalas.
+- **Pandas:** Manipulação e estruturação inicial da base de dados.
+
+## 🧠 Arquitetura do Modelo
+O algoritmo foi estruturado num *pipeline* lógico de aprendizado:
+1. **Preparação:** Os dados foram separados e normalizados para garantir que o modelo não sofresse distorções devido a diferentes escalas numéricas.
+2. **Rede Neural:** 
+   - **Camadas Ocultas:** Duas camadas densas (com 10 e 8 neurónios respetivamente), utilizando a função de ativação `ReLU`.
+   - **Camada de Saída:** 3 neurónios com a função `Softmax`, ideal para tarefas de classificação multiclasse, pois converte as saídas em probabilidades.
+3. **Treino e Avaliação:** O modelo foi treinado ao longo de 50 épocas (ajuste de pesos) e avaliado com dados nunca antes vistos (conjunto de teste) para medir a sua verdadeira capacidade de generalização.
+
+## 📊 Execução e Demonstração
+Abaixo é possível visualizar a rotina de execução, desde a compilação do modelo até à geração de previsões onde o algoritmo indica a classe com maior probabilidade de correspondência:
+
+> **Testes e Execução do Modelo:**
+> 
+> ![Execução do Modelo](./images/exe.png)
+
+> **Estrutura de Código (Importações e Arquitetura):**
+> 
+> ![Estrutura do Código 1](./images/code.png)
+> ![Estrutura do Código 2](./images/code1.1.png)
+
+## 📂 Acesso ao Código Fonte
+Todo o *pipeline* de tratamento de dados, construção da rede e treino pode ser analisado no ficheiro abaixo:
+- [📄 MachineLearningComPython.py](https://github.com/lukkyzdev/MachineLearningComPython/blob/main/MachineLearningComPython.py)
 
 ---
-
-*A recomendação da minha instituição foi utilizar o Google Colab para desenvolver o código e executá-lo.*
-
----
-
-## A ORIENTAÇÃO DO PROJETO FOI A SEGUINTE:
-
-Você foi contratado para criar um modelo de Machine Learning que classifica espécies de flores Iris
-com base em características como comprimento e largura das sépalas e pétalas. Você usará o
-TensorFlow para construir, treinar e avaliar o modelo
-
-###  Passo 1: Importar Bibliotecas e Carregar Dados
-- Usar bibliotecas como tensorflow, pandas e scikit-learn.
-- Carregar o conjunto de dados Iris disponível no scikit-learn.
-
-### Passo 2: Pré-processamento dos Dados
-- Dividir o conjunto de dados em treinamento e teste.
-- Normalizar os dados.
-
-###  Passo 3: Construir o Modelo
-- Usar TensorFlow para construir um modelo de rede neural simples.
-
-###  Passo 4: Treinar o Modelo
-- Treinar o modelo com os dados de treinamento
-
-### Passo 5: Avaliar o Modelo
-- Avaliar a precisão do modelo usando os dados de teste.
-
-### Passo 6: Fazer Previsões
-- Fazer previsões com o modelo treinado
-
----
-
-## Vamos começar mostrando meu código por completo!
-
-Você pode acompanhar pela imagem abaixo ou pelo arquivo aqui no github ---> [Arquivo do Projeto](https://github.com/lukkyzdev/MachineLearningComPython/blob/main/MachineLearningComPython.py)
-
-![Code](./images/code.png)
-
-![Code 1.1](./images/code1.1.png)
-
----
-
-## Testes e Execução
-
-![Exe](./images/exe.png)
-
----
-
-## Conclusão e Explicações
-
-- *O código começa importando as bibliotecas necessárias e carregando o
-conjunto de dados Iris, que contém medidas das sépalas e pétalas de três
-espécies de flores. Em seguida, os dados são divididos em treino e teste
-e passam por normalização para ficarem na mesma escala.*
-
-*Depois disso, é construída uma rede neural simples com o TensorFlow:
-duas camadas escondidas (com 10 e 8 neurônios, usando ativação relu)
-e uma camada de saída com 3 neurônios (usando softmax, já que temos
-3 classes).*
-
-*O modelo é compilado com o otimizador adam, a função de
-perda **sparse_categorical_crossentropy** e a métrica de acurácia.*
-
-*O treinamento acontece em 50 épocas, ajustando os pesos da rede para
-aprender os padrões. Em seguida, o modelo é avaliado no conjunto de
-teste para medir a precisão alcançada.*
-
-*Por fim, o modelo faz previsões: gera probabilidades para cada espécie
-de flor e indica qual classe tem maior chance, permitindo comparar com
-as classes reais.*
+*Desenvolvido por Lucas Fontes com foco no aprimoramento de fundamentos em Inteligência Artificial e Análise de Dados.*
